@@ -14,11 +14,17 @@ ProductTag.init(
     },
     productId: {
       type: DataTypes.INTEGER,
-      // foreign key, reference Product mocel's id
+      references: {
+        model: 'Product',
+        key: 'id'
+      }
     },
     tagId: {
       type: DataTypes.INTEGER,
-      // reference Tag model's ID
+      references: {
+        model: 'Tag',
+        key: 'id'
+      }
     }
   },
   {

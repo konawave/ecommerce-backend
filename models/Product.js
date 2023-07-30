@@ -28,6 +28,13 @@ Product.init(
     type: DataTypes.DECIMAL,
     allowNull: false,
     val: {isDecimal: true}
+   },
+   categoryId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'Category',
+      key: 'id'
+    }
    }
   },
   {
